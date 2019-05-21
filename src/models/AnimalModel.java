@@ -10,24 +10,8 @@ public abstract class AnimalModel {
         this.animalSound = animalSound;
     }
 
-    public String getAnimalName() {
-        return animalName;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-
-    public String getAnimalSound() {
-        return animalSound;
-    }
-
-    public void setAnimalSound(String animalSound) {
-        this.animalSound = animalSound;
-    }
-
     @Override
     public String toString() {
-        return animalName + " makes " + animalName;
+        return animalName + " makes " + animalSound + " and is a" + this.getClass().getSimpleName().toUpperCase();
     }
 }

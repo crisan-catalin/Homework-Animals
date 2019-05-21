@@ -9,13 +9,6 @@ import java.util.List;
 
 public class Main {
 
-    private static final String DOG = "DOG";
-    private static final String CAT = "CAT";
-    private static final String SNAKE = "SNAKE";
-    private static final String DOG_SOUND = "Ruff";
-    private static final String CAT_SOUND = "Meow";
-    private static final String SNAKE_SOUND = "Sss";
-
     public static void main(String[] args) {
         List<AnimalModel> animals = generateAnimals();
         for (AnimalModel animal : animals) {
@@ -26,14 +19,13 @@ public class Main {
     private static List<AnimalModel> generateAnimals() {
         List<AnimalModel> animalsList = new ArrayList<>();
 
-        Dog chihuahua = new Dog(DOG, DOG_SOUND);
-        Dog labrador = new Dog(DOG, DOG_SOUND);
-        Dog husky = new Dog(DOG, DOG_SOUND);
-        Cat british = new Cat(CAT, CAT_SOUND);
-        Cat sfinx = new Cat(CAT, CAT_SOUND);
-        Cat cornish = new Cat(CAT, CAT_SOUND);
-        Snake anaconda = new Snake(SNAKE, SNAKE_SOUND);
-        Snake python = new Snake(SNAKE, SNAKE_SOUND);
+        Dog chihuahua = new Dog("Snoop", "Whatzuup");
+        Dog labrador = new Dog("Rex", "Ruff ruff");
+        Dog husky = new Dog("Nino", "Awooo");
+        Cat british = new Cat("Felix", "Meow");
+        Cat sfinx = new Cat("Queen", "Purrrr");
+        Cat cornish = new Cat("John", "MEOW!");
+        Snake anaconda = new Snake("Angy", "Sssss");
 
         animalsList.add(chihuahua);
         animalsList.add(labrador);
@@ -42,7 +34,6 @@ public class Main {
         animalsList.add(sfinx);
         animalsList.add(cornish);
         animalsList.add(anaconda);
-        animalsList.add(python);
 
         Collections.shuffle(animalsList);
 
